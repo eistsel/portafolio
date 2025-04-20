@@ -1,0 +1,34 @@
+---
+import ProjectCard from "./ProjectCard.astro"
+---
+
+<div class="flex flex-col w-full h-full justify-between min-h-screen ml-60 gap-15 overflow-y-auto">
+    <section id="about" class="text-gray-500 mt-20 text-balance text-lg w-2/3 space-y-4 mb-16 scroll-mt-16" aria-label="about me">
+        <p class="mb-4">I´m a software ingeniering Developer</p>
+        <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quod impedit recusandae! Dicta et ipsa laborum quas voluptate obcaecati temporibus! Rerum deleniti sapiente perspiciatis provident quasi aut excepturi nostrum ipsam?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita a optio ullam neque assumenda voluptate dolor ut sapiente eaque voluptatum hic maxime, modi exercitationem incidunt perferendis? Commodi officiis molestiae delectus!</p>
+    </section>
+    <section id="experience" class="mb-16 scroll-mt-16 w-2/3" aria-label="work experience">
+            <ProjectCard 
+            titulo="Senior Frontend Engineer" 
+            description="Desarrollo una app de comida rapida en la que se optimiza la atencion de clientes" 
+            etiquetas={["React", "Node.js", "Express", "MongoDB"]} 
+            año="2024-2025"
+            />
+            <ProjectCard
+            titulo="Lead Engineer" 
+            description="optimizacion de responsividad de app yape" 
+            etiquetas={["tailwind", "Angular","typescript", "SQlite"]} 
+            año="2025-2026"
+            />
+            <ProjectCard
+            titulo="Fullstack Engineer" 
+            description="creacion desde cero de e-commerce" 
+            etiquetas={["flutter", "Dart","Firebase", "SQlite"]} 
+            año="2026-2027"
+            />
+    </section>
+    <section id="projects">
+
+    </section>
+</div>

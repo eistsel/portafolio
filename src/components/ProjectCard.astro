@@ -1,0 +1,24 @@
+---
+const {titulo, description, etiquetas, link, año} = Astro.props;
+---
+<div class="flex flex-row hover:bg-slate-800/50 rounded-md p-4 mb-4 space-x-12 transition-all duration-300 ease-in-out group">
+    <header class="z-10 text-slate-500 text-sm flex-shrink-0"> <!-- flex-shrink-0 evita que el contenido del <header> se reduzca o colapse -->
+        {año}
+    </header>
+    <div class="flex flex-col justify-between w-full space-y-3">
+        <h3 class="text-slate-200 font-medium">{titulo}</h3>
+        <p class="mt-2 text-sm leading-normal text-slate-400">{description}</p>
+        <div class="flex flex-wrap gap-4 mb-2">
+            <!-- <ul class="mt-2 bg-teal-400/10 text-teal-300" aria-label="tags">
+                <li>{etiquetas}</li>
+            </ul> -->
+            <ul class="flex flex-wrap gap-2">
+                {etiquetas.map((tag) => (
+                    <li class="mt-2 bg-teal-400/10 rounded-full px-3 py-1 text-teal-300 text-sm" aria-label="tags">{tag}</li>
+                ))}
+            </ul>
+        </div>
+        <a href={link} class="text-slate-300 mt-2">Ver proyecto</a>
+    </div>
+</div>
+
